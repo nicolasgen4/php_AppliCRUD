@@ -1,5 +1,5 @@
 # php_AppliCRUD
-Site web front et back office, CMS avec fonctions CRUD, e-commerce, système de comptes administrateurs et connexion à une base de données SQL
+Site web front et back office en architecture MVC, fonctions CRUD, e-commerce, CMS avec système de comptes administrateurs et connexion à une base de données SQL
 
 # Fonctionnalités
 <ul>
