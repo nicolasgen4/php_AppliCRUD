@@ -1,0 +1,434 @@
+:root {
+    --couleur-primaire: #FDFDFD;
+    --couleur-secondaire: #2D2D2D;
+    --couleur-navigation: #FAB2D7;
+    --couleur-defilement: rgba(102, 85, 94, 0.67);
+    --couleur-logo: #545454;
+    --ombre: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --typo-titres: 'Old Standard TT', 'Times New Roman', Times, serif;
+    --typo-texte: 'Poppins', Arial, Helvetica, sans-serif;
+    --taille-titres: 72px;
+    --taille-titres-intermediaire: 48px;
+    --taille-sous-titres: 36px;
+    --taille-petits-titres: 22px;
+    --taille-minus-titres: 20px;
+    --taille-texte: 16px;
+    --taille-texte-nav: 18px;
+    --taille-titres-mobile: 32px;
+    --fine: 300;
+    --normal: 400;
+    --largeur-wrapper: 1200px;
+    --largeur-wrapper-nav: 1720px;
+}
+
+/*
+REGLES GLOBALES DU SITE
+*/
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    font-family: var(--typo-texte);
+    font-size: var(--taille-texte);
+    font-weight: var(--fine);
+}
+
+main {
+    margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+    font-family: var(--typo-titres);
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-secondaire);
+}
+
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-style: italic;
+}
+
+/*
+STRUCTURE GÉNÉRALE
+*/
+.wrapper {
+    max-width: var(--largeur-wrapper);
+    margin: auto;
+}
+
+.inverse {
+    transform: scaleX(-1);
+}
+
+.wdth-cent {
+    width: 100%;
+}
+
+.wdth-cinquante {
+    width: 50%;
+}
+
+.center {
+    text-align: center;
+}
+
+/*
+CLASSES FLEXBOX
+*/
+.row-start-center {
+    display: flex;
+    align-items: center;
+}
+
+.row-start-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+.row-btw-start {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-btw-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-btw-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.row-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-start {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-btw {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+ACCESSIBILITÉ HANDICAPÉ
+ET NAVIGATION CLAVIER
+*/
+/*Rendre invisible un élément visuellement
+mais accessible aux lecteurs d'écrans*/
+.lecteur-ecran {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/*Lui permettre d'être focalisé au clavier*/
+.lecteur-ecran-focus:active,
+.lecteur-ecran-focus:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: normal;
+    width: auto;
+}
+
+/*
+ÉTATS ET PSEUDO CLASSES
+*/
+.active {
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+}
+
+a:focus-visible {
+    outline: solid .4rem var(--couleur-navigation);
+}
+
+input:focus,
+textarea:focus,
+select:focus-visible {
+    outline: solid .2rem var(--couleur-navigation);
+}
+
+select {
+    background-color: var(--couleur-primaire);
+    border: 1px #8f8f9d solid;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    padding-left: 1rem;
+}
+
+select:hover {
+    color: var(--couleur-navigation);
+    background-color: var(--couleur-secondaire);
+    border: 1px var(--couleur-primaire) solid;
+    border-radius: 0.1rem;
+}
+
+/*
+MENU DE NAVIGATION
+*/
+.navigation {
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    white-space: nowrap;
+    gap: 2.8rem;
+}
+
+nav ul a {
+    padding-right: 0.6rem;
+    font-size: var(--taille-texte-nav);
+}
+
+nav ul a:hover,
+nav ul a:focus,
+nav ul a:focus-visible {
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+    outline: none;
+}
+
+nav ul .deco a svg {
+    vertical-align: middle;
+}
+
+nav ul .deco a {
+    padding: 0;
+}
+
+nav ul .deco a:hover,
+nav ul .deco a:focus {
+    border-bottom: none;
+}
+
+nav ul .deco a:focus-visible {
+    outline: solid .2rem var(--couleur-navigation);
+}
+
+.navigation-mobile {
+    display: none;
+}
+
+/*
+TITRES DES PAGES ET MESSAGES
+*/
+.console h1 {
+    font-size: var(--taille-titres-intermediaire);
+}
+
+.titres {
+    font-family: var(--typo-texte);
+    font-size: var(--taille-petits-titres);
+    margin-bottom: 1.6rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+    width: fit-content;
+}
+
+.bloc-message {
+    position: relative;
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+}
+
+.message {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: var(--taille-titres-mobile);
+}
+
+/*
+FORMULAIRES DES PAGES
+*/
+form {
+    gap: 1.6rem;
+    max-width: 66%;
+}
+
+form label {
+    padding-bottom: 0.32rem;
+}
+
+form input,
+form select {
+    height: 2.8rem;
+}
+
+form input[type=file] {
+    max-width: 320px;
+    max-height: 260px;
+    padding: 5.8rem 2rem 5.8rem 2rem;
+    box-shadow: var(--ombre);
+    cursor: pointer;
+}
+
+form textarea {
+    height: 18.2rem;
+}
+
+.charger-photo {
+    gap: 3.2rem;
+}
+
+section.affichage,
+section.formulaire {
+    padding: 0 0 3.4rem 0;
+}
+
+.apercu {
+    max-width: 360px;
+    height: 232px;
+}
+
+.modification {
+    gap: 2rem;
+}
+
+/*
+BOUTONS
+*/
+/*boutons des formulaires*/
+button[type=submit], .annuler {
+    padding: 0.8rem 2.4rem;
+    font-size: var(--taille-texte-nav);
+    font-weight: var(--normal);
+    font-family: var(--typo-texte);
+    border-radius: 0.8rem;
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    border: 0.18rem solid var(--couleur-secondaire);
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+
+button[type=submit]:hover,
+button[type=submit]:focus,
+.annuler:hover,
+.annuler:focus {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-primaire);
+    border: 0.18rem solid var(--couleur-secondaire);
+    outline: none;
+}
+
+button[type=submit]:focus-visible {
+    outline: solid .4rem var(--couleur-navigation);
+}
+
+/*boutons modifier et supprimer*/
+.actions {
+    width: 100%;
+    gap: 1rem;
+    margin-top: 0.6rem;
+}
+
+.actions a {
+    border: 1px solid var(--couleur-navigation);
+    padding: 0.4rem 0;
+    width: 6rem;
+}
+
+.actions a:hover,
+.actions a:focus {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-navigation);
+    outline: none;
+}
+
+/*boutons pour remonter*/
+.remonter {
+    display: none;
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    padding: 0.8rem;
+    border-radius: 0.25rem;
+    background-color: var(--couleur-defilement);
+}
+
+.remonter:hover {
+    background-color: var(--couleur-secondaire);
+}

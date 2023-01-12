@@ -1,0 +1,43 @@
+.conteneur-soins {
+    gap: 2rem;
+}
+
+.boite-img {
+    height: 248px;
+}
+
+.item-soins {
+    max-width: 296px;
+}
+
+.item-soins img {
+    width: 296px;
+    height: 248px;
+    object-fit: cover;
+}
+
+.item-soins .donnees {
+    height: 500px;
+    padding: 0.6rem;
+    box-shadow: var(--ombre);
+    overflow: hidden;
+}
+
+.item-soins .donnees h3 {
+    font-family: var(--typo-texte);
+    font-weight: var(--normal);
+    font-size: var(--taille-minus-titres);
+}
+
+.item-soins .donnees p:nth-child(4) {
+    font-style: italic;
+    height: 92px;
+}
+
+.item-soins .donnees p:nth-child(6) {
+    font-weight: bold;
+}
+
+.stock-alerte {
+    color: red;
+}

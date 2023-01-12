@@ -1,0 +1,14 @@
+.admin {
+    max-width: 480px;
+    gap: 2rem;
+}
+
+.admin > ul {
+    box-shadow: var(--ombre);
+    padding: 1.2rem 0.8rem;
+    overflow: hidden;
+}
+
+.admin .actions {
+    margin-top: 2rem;
+}

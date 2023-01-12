@@ -1,0 +1,100 @@
+@media screen and (max-width: 1400px) {
+    /*MENU DE NAVIGATION*/
+    nav ul a {
+        font-size: var(--taille-texte);
+    }
+
+    nav ul {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    /*STRUCTURE GÉNÉRALE*/
+    .wrapper {
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+    }
+
+    /*MENU BURGER*/
+     .navigation {
+        display: none;
+    }
+
+    .navigation-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0.4rem 2rem 0.4rem;
+    }
+
+    #menu-burger {
+        position: relative;
+        height: 40px;
+        width: 52px;
+        border: 0.18rem solid var(--couleur-primaire);
+        border-radius: 0.8rem;
+        cursor: pointer;
+    }
+
+    #menu-burger svg {
+        height: 100%;
+        width: auto;
+        align-self: center;
+    }
+
+    #menu-burger .menu-mobile {
+        position: absolute;
+        top: 100%;
+        padding: 1rem 3.2rem 1rem 1rem;
+        gap: 1.8rem;
+        font-size: var(--taille-texte-nav);
+        background-color: var(--couleur-primaire);
+        border: 1px solid var(--couleur-navigation);
+        box-shadow: var(--ombre)
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    /*PAGE FERMETURE*/
+    .annonce {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /*FORMULAIRES ADMIN*/
+    form {
+        max-width: 100%;
+    }
+
+    /*PAGE CATÉGORIES*/
+    .categories > ul {
+        max-width: 100%;
+    }
+
+    /*PAGE INFORMATIONS*/
+    .adresse {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    /*INPUT DES IMAGES*/
+    .charger-photo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .apercu {
+        max-width: 100%;
+        height: 180px;
+    }
+
+    /*PAGE SALON*/
+    .img-actuelle a {
+        max-width: 100%;
+    }
+}

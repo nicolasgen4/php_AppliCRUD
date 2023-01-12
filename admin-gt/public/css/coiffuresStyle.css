@@ -1,0 +1,13 @@
+.actions-coiffures {
+    align-self: flex-end;
+}
+
+.liste-coiffures {
+    gap: 1.6rem;
+}
+
+.liste-coiffures img {
+    width: 280px;
+    height: 460px;
+    object-fit: cover;
+}

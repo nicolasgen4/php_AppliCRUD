@@ -1,0 +1,25 @@
+.guide {
+    gap: 0.8rem;
+    margin-bottom: 2.8rem;
+}
+
+.guide h3 {
+    font-family: var(--typo-texte);
+    padding-left: 0.8rem;
+}
+
+.guide ul {
+    gap: 0.6rem;
+    margin-left: 2rem;
+}
+
+.guide a {
+    padding-left: 1.2rem;
+}
+
+.guide a:hover,
+.guide a:focus {
+    background-image: url("data:image/svg+xml, %3Csvg width='12' height='24' viewBox='0 0 18 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.0925007 26.475L11.1608 15L0.0925007 3.525L3.5 0L18 15L3.5 30L0.0925007 26.475Z' fill='%23FAB2D7' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center left;
+}

@@ -1,0 +1,21 @@
+.annonce {
+    max-width: 64%;
+    box-shadow: var(--ombre);
+    gap: 1rem;
+    padding: 1.2rem 0.8rem;
+    overflow: hidden;
+}
+
+#fermeture p {
+    font-size: var(--taille-texte-nav);
+    margin-bottom: 1.4rem;
+}
+
+#fermeture ul {
+    gap: 0.6rem;
+    margin-bottom: 2.6rem;
+}
+
+#fermeture li {
+    list-style: inside;
+}

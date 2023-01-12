@@ -1,0 +1,40 @@
+.entree-admin {
+    position: relative;
+    margin-top: 3.2rem;
+    gap: 2rem;
+}
+
+.entree-admin h1 {
+    font-size: var(--taille-sous-titres);
+    margin-bottom: 2rem;
+}
+
+.connexion-form {
+    max-width: 100%;
+    gap: 2rem;
+}
+
+.connexion {
+    position: absolute;
+    top: 46%;
+    font-size: var(--taille-texte-nav);
+}
+
+.connexion.warning {
+    color: red;
+}
+
+.connexion.success {
+    color: green;
+}
+
+.champ-mdp {
+    position: relative;
+}
+
+.oeil {
+    position: absolute;
+    top: 48%;
+    right: 2%;
+    cursor: pointer;
+}

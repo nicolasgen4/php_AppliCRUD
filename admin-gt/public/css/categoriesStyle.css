@@ -1,0 +1,24 @@
+.categories {
+    gap: 2rem;
+}
+
+.categories > ul {
+    gap: 2.4rem;
+    max-width: 66%;
+}
+
+.categories > ul > li {
+    gap: 0.6rem;
+    box-shadow: var(--ombre);
+    padding: 2rem 0.8rem;
+    max-width: 238px;
+    overflow: hidden;
+}
+
+.categories ul li span {
+    font-size: var(--taille-minus-titres);
+}
+
+#modifier-categorie {
+    margin-top: 4.4rem;
+}

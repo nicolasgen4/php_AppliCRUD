@@ -1,0 +1,33 @@
+.img-carrousel {
+    gap: 6.8rem;
+}
+
+.img-carrousel section {
+    gap: 1.4rem;
+}
+
+.img-carrousel section form button[type=submit] {
+    margin-left: 6.4rem;
+}
+
+.img-actuelle h3 {
+    font-family: var(--typo-texte);
+    font-size: var(--taille-texte-nav);
+    padding-bottom: 0.2rem;
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+    width: fit-content;
+}
+
+.img-actuelle img {
+    max-height: 363px;
+    background-color: var(--couleur-secondaire);
+}
+
+.img-actuelle a {
+    max-width: 66%;
+}
+
+.img-actuelle a span {
+    align-self: flex-end;
+    font-style: italic;
+}

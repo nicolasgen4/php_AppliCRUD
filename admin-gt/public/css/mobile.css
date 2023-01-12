@@ -1,0 +1,71 @@
+@media screen and (max-width: 540px) {
+
+    /*EN-TETE DE L'ADMIN ET MESSAGES*/
+    .console h1 {
+        font-size: var(--taille-sous-titres);
+    }
+
+    .message {
+        font-size: var(--taille-petits-titres);
+    }
+
+    /*BOUTONS DES FORMULAIRES*/
+    button[type="submit"] {
+        font-size: var(--taille-texte);
+    }
+
+    /*CARTES DES PAGES*/
+    #liste-categories,
+    .conteneur-soins,
+    .horaires {
+        justify-content: center;
+    }
+
+    /*PAGE ACCUEIL*/
+    .guide ul {
+        gap: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    /*EN-TETE DE L'ADMIN ET MESSAGES*/
+    .console h1 {
+        font-size: 28px;
+    }
+
+    .message {
+        font-size: var(--taille-minus-titres);
+    }
+
+    /*INPUT DES IMAGES*/
+    .charger-photo {
+        gap: 1rem;
+    }
+
+    form input[type="file"] {
+        padding: 2.8rem 0 2.8rem 0;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+
+    /*PAGE DE CONNEXION*/
+    .entree-admin h1 {
+        font-size: var(--taille-titres-mobile);
+    }
+
+    .connexion-form .champ {
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 384px) {
+
+    /*PAGE DE CONNEXION*/
+    .entree-admin h1 {
+        font-size: 28px;
+    }
+}

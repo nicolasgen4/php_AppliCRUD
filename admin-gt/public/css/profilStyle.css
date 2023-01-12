@@ -1,0 +1,12 @@
+.mdp-actuel,
+.nouveau-mdp,
+.confirm-mdp {
+    position: relative;
+}
+
+.oeil {
+    position: absolute;
+    top: 48%;
+    right: 2%;
+    cursor: pointer;
+}
