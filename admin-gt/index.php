@@ -10,7 +10,6 @@
  * Analyse la session d'admin
  * Route vers le bon controleur
  * Mise à jour : 18/10/2022
- * @author nicolasloizeau.gen4@gmail.com
  */
 
 session_set_cookie_params(['SameSite' => 'Lax', 'Secure' => true]);
