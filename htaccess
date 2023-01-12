@@ -1,0 +1,65 @@
+Options -Indexes
+
+RewriteEngine On
+
+#Réécriture des URL
+RewriteRule ^accueil.php$  /site-coiffeuse/index.php?controleur=accueil [L]
+RewriteRule ^soins.php$  /site-coiffeuse/index.php?controleur=soins [L]
+RewriteRule ^coiffures.php$  /site-coiffeuse/index.php?controleur=coiffures [L]
+RewriteRule ^salon.php$  /site-coiffeuse/index.php?controleur=salon [L]
+RewriteRule ^contact.php$  /site-coiffeuse/index.php?controleur=contact [L]
+RewriteRule ^informations.php$  /site-coiffeuse/index.php?controleur=informations [L]
+RewriteRule ^panier.php$  /site-coiffeuse/index.php?controleur=panier [L]
+RewriteRule ^merci.php$  /site-coiffeuse/index.php?controleur=merci [L]
+RewriteRule ^erreur404.php$  /site-coiffeuse/index.php?controleur=erreur404 [L]
+RewriteRule ^mentions.php$  /site-coiffeuse/index.php?controleur=mentions [L]
+RewriteRule ^admin-gt/connexion.php$  /site-coiffeuse/admin-gt/index.php?controleur=connexion [L]
+RewriteRule ^admin-gt/accueil.php$  /site-coiffeuse/admin-gt/index.php?controleur=accueil [L]
+RewriteRule ^admin-gt/soins.php$  /site-coiffeuse/admin-gt/index.php?controleur=soins [L]
+RewriteRule ^admin-gt/categories.php$  /site-coiffeuse/admin-gt/index.php?controleur=categories [L]
+RewriteRule ^admin-gt/coiffures.php$  /site-coiffeuse/admin-gt/index.php?controleur=coiffures [L]
+RewriteRule ^admin-gt/salon.php$  /site-coiffeuse/admin-gt/index.php?controleur=salon [L]
+RewriteRule ^admin-gt/informations.php$  /site-coiffeuse/admin-gt/index.php?controleur=informations [L]
+RewriteRule ^admin-gt/fermeture.php$  /site-coiffeuse/admin-gt/index.php?controleur=fermeture [L]
+RewriteRule ^admin-gt/administrateurs.php$  /site-coiffeuse/admin-gt/index.php?controleur=administrateurs [L]
+RewriteRule ^admin-gt/profil.php$  /site-coiffeuse/admin-gt/index.php?controleur=profil [L]
+RewriteRule ^admin-gt/deconnexion.php$  /site-coiffeuse/admin-gt/index.php?controleur=connexion&action=deconnexion [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#Redirection 301 vers le HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#401 Accès refusé aux dossiers et à leurs fichiers
+RewriteRule ^modele/ - [F]
+RewriteRule ^modele/[^/]+\.php$ - [F]
+RewriteRule ^admin-gt/inclure/ - [F]
+RewriteRule ^admin-gt/inclure/[^/]+\.php$ - [F]
+RewriteRule ^admin-gt/librairies/ - [F]
+RewriteRule ^admin-gt/librairies/[^/]+\.php$ - [F]
+RewriteRule ^admin-gt/modele/ - [F]
+RewriteRule ^admin-gt/modele/[^/]+\.php$ - [F]
+RewriteRule ^admin-gt/classes/ - [F]
+RewriteRule ^admin-gt/classes/[^/]+\.php$ - [F]
+
+#401 Accès refusé aux ht
+<files .htaccess>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</files>
+<files .htpasswd>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Deny from all
+	</IfModule>
+</files>
+
