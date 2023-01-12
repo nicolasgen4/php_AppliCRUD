@@ -1,0 +1,86 @@
+.informations-bandeau {
+    background-image: url(../images/bandeau-informations.webp);
+    background-position: 50% 0%;
+}
+
+.horaires h3 {
+    font-size: var(--taille-petits-titres);
+    font-family: var(--typo-texte);
+    font-weight: var(--fine);
+}
+
+.jours {
+    width: 86%;
+    margin: 2rem 0 5.8rem 0;
+    gap: 4rem;
+}
+
+.jours h4 {
+    font-family: var(--typo-texte);
+    font-weight: var(--fine);
+    font-size: var(--taille-texte-nav);
+    padding-bottom: 0.2rem;
+}
+
+.jours section {
+    height: 4rem;
+    width: 7.6rem;
+    padding-right: 2.4rem;
+    border-right: 0.1rem solid var(--couleur-secondaire);
+}
+
+.jours li {
+    list-style: inside;
+}
+
+.infos-utiles {
+    width: 76%;
+}
+
+.meteo h3 {
+    font-size: var(--taille-petits-titres);
+    font-family: var(--typo-texte);
+    font-weight: var(--fine);
+    padding-bottom: 0.6rem;
+}
+
+.meteo ul {
+    font-size: var(--taille-texte-nav);
+    gap: 0.6rem;
+}
+
+.itineraire {
+    margin-top: 5.8rem;
+}
+
+.itineraire h4,
+.itineraire a {
+    font-family: var(--typo-texte);
+    font-size: var(--taille-texte);
+    font-weight: var(--fine);
+    align-self: flex-end;
+}
+
+.itineraire a {
+    padding-bottom: 0.4rem;
+    position: relative;
+}
+
+.itineraire a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+}
+
+.itineraire .parking,
+.itineraire .google-maps {
+    gap: 0.8rem;
+    text-align: right;
+}
+
+.itineraire .parking section:nth-child(1) {
+    padding-bottom: 1rem;
+}

@@ -1,0 +1,70 @@
+.coiffures-bandeau {
+    background-image: url(../images/bandeau-coiffures.webp);
+    background-position: 50% 0%;
+}
+
+#galerie {
+    gap: 1.5rem;
+}
+
+#galerie img {
+    width: 384px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.photo-anime {
+    width: 384px;
+    height: 460px;
+}
+
+.boite {
+    transition: all .07s linear;
+    position: relative;
+    width: 384px;
+    height: 460px;
+}
+
+.boite:hover .boite-animation {
+    transform: translateZ(-5px) rotateX(90deg);
+    display: block;
+}
+
+.boite-animation {
+    transition: all .3s ease-out;
+    transform: translateZ(-25px);
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.devant {
+    transform: rotateX(0deg) translateZ(230px);
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.derriere {
+    transform: rotateX(-90deg) translateZ(25px);
+    position: absolute;
+    border-radius: 1rem;
+    width: 384px;
+    height: 460px;
+    text-align: center;
+    color: var(--couleur-primaire);
+    background-color: var(--couleur-secondaire);
+    gap: 2rem;
+}
+
+.derriere h3 {
+    font-size: var(--taille-minus-titres);
+    font-family: var(--typo-texte);
+}
+
+.derriere p {
+    line-height: 1.6rem;
+    margin: 0.8rem;
+}

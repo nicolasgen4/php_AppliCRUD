@@ -1,0 +1,175 @@
+.panier-bandeau {
+    background-image: url(../images/bandeau-panier.webp);
+    background-position: 50% 0%;
+}
+
+.panier {
+    gap: 1.6rem;
+    margin-bottom: 8rem;
+}
+
+.panier-vide {
+    gap: 1rem;
+}
+
+.panier-vide h3 {
+    font-size: var(--taille-titres-mobile);
+    font-family: var(--typo-texte);
+    font-weight: var(--fine);
+}
+
+.somme {
+    position: relative;
+    gap: 1.6rem;
+    padding-bottom: 0.8rem;
+    font-size: var(--taille-texte-nav);
+    font-weight: var(--normal);
+    text-align: right;
+}
+
+.somme::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10%;
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+}
+
+.etiquette {
+    box-shadow: var(--ombre);
+    padding: 0.8rem 1.6rem;
+    gap: 1rem;
+}
+
+.etiquette img {
+    width: 215px;
+    height: 180px;
+}
+
+.etiquette h3,
+.etiquette section div p {
+    font-family: var(--typo-texte);
+    font-size: var(--taille-texte-nav);
+    font-weight: var(--normal);
+}
+
+.etiquette h3 span {
+    font-size: var(--taille-texte);
+    font-style: italic;
+}
+
+.etiquette section {
+    height: 180px;
+}
+
+.etiquette section p:nth-child(3) {
+    width: 80%;
+    font-style: italic;
+}
+
+.etiquette form button {
+    font-weight: var(--normal);
+    font-family: var(--typo-texte);
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    border: 0.1rem solid #8f8f9d;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    text-align: center;
+    white-space:nowrap;
+}
+
+.etiquette form button:hover {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-primaire);
+    border: 0.1rem solid var(--couleur-secondaire);
+}
+
+.etiquette form input {
+    width: 14%;
+    margin: 0 0.6rem 0 0.6rem;
+}
+
+.etiquette a {
+    font-size: var(--taille-texte-nav);
+    gap: 1.2rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.etiquette a:hover {
+    text-decoration: underline;
+}
+
+.etiquette a svg path:hover {
+    fill: var(--couleur-navigation);
+}
+
+.etiquette:hover {
+    transform: scale(1.02);
+    transition-duration: 800ms;
+    transition-property: all;
+}
+
+.actions-panier {
+    margin-top: 2rem;
+    gap: 6.8rem;
+}
+
+.formulaire-reservation div:nth-child(4) {
+    margin-top: 1rem;
+}
+
+#reservation .champ {
+    margin-bottom: 1.8rem;
+}
+
+#reservation input {
+    height: 2.8rem;
+}
+
+#reservation select {
+    height: 3.2rem;
+    background-color: var(--couleur-primaire);
+    border: 1px #8f8f9d solid;
+    border-radius: 0.1rem;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+#reservation select:hover,
+#reservation select:focus-visible {
+    color: var(--couleur-navigation);
+    background-color: var(--couleur-secondaire);
+    border: none;
+    border-radius: 0.1rem;
+}
+
+#reservation textarea {
+    height: 18.2rem;
+    margin-bottom: 0.8rem;
+}
+
+#reservation label {
+    padding-bottom: 0.32rem;
+}
+
+#reservation #nomClient,
+#reservation #prenomClient,
+#reservation #jour {
+    margin-right: 1.8rem;
+}
+
+.message-reservation {
+    width: 100%;
+    text-align: center;
+    font-size: var(--taille-titres-mobile);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.message-reservation.warning {
+    color: red;
+}

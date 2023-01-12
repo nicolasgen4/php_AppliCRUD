@@ -1,0 +1,123 @@
+.soins-bandeau {
+    background-image: url(../images/bandeau-soins.webp);
+    background-position: 70% 0%;
+}
+
+.filtre {
+    text-transform: capitalize;
+}
+
+.item {
+    width: 358px;
+    height: 660px;
+    overflow: hidden;
+}
+
+.item .boite-image {
+    overflow: hidden;
+    height: 300px;
+}
+
+.item a {
+    gap: 1rem;
+}
+
+.item img {
+    width: 358px;
+    height: 300px;
+}
+
+.item img:hover,
+.item img:focus {
+    transform: scale(1.1);
+    transition-duration: 1000ms;
+    transition-property: all;
+    filter: brightness(105%);
+}
+
+.item h3 {
+    font-family: var(--typo-texte);
+    font-weight: var(--normal);
+    font-size: var(--taille-minus-titres);
+}
+
+.item p {
+    line-height: 1.4rem;
+}
+
+
+.item p:nth-child(4) {
+    height: 90px;
+}
+
+.produits {
+    gap: 3.92rem;
+}
+
+.produits p span {
+    font-weight: var(--normal);
+}
+
+.produits label {
+    font-weight: var(--normal);
+}
+
+.produits form {
+    gap: 1rem;
+}
+
+.quantite {
+    gap: 0.4rem;
+    overflow: hidden;
+    padding: 0.4rem 0 0.4rem 0;
+}
+
+.quantite input {
+    width: 18%;
+}
+
+.icone-panier {
+    position: relative;
+    gap: 0.4rem;
+}
+
+.icone-panier .quantite-panier {
+    position: absolute;
+    top: 22%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    color: var(--couleur-primaire);
+    font-weight: var(--normal);
+}
+
+.icone-panier .titre-panier {
+    white-space: nowrap;
+}
+
+.filtres {
+    gap: 1.6rem;
+}
+
+#filtres {
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.reinitialiser-filtres {
+    border: none;
+    border-bottom: 0.313rem solid var(--couleur-primaire);
+    background-color: transparent;
+    font-weight: var(--fine);
+    color: var(--couleur-secondaire);
+    cursor: pointer;
+}
+
+.reinitialiser-filtres:hover {
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+}
+
+button.reserver.ferme {
+    color: var(--couleur-primaire);
+    background-color: var(--couleur-secondaire);
+    cursor: default;
+}

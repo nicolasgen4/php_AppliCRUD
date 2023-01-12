@@ -1,0 +1,258 @@
+@media screen and (max-width: 540px) {
+    /*MENU BURGER*/
+    .navigation {
+        display: none;
+    }
+
+    .navigation-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        margin: 0 0.4rem 0 0.4rem;
+    }
+
+    #menu-burger {
+        height: 40px;
+        width: 52px;
+        border: 0.18rem solid var(--couleur-primaire);
+        border-radius: 0.8rem;
+        cursor: pointer;
+    }
+
+    #menu-burger svg {
+        height: 100%;
+        width: auto;
+        align-self: center;
+    }
+
+    #menu-burger .menu-mobile {
+        position: absolute;
+        top: 100%;
+        padding: 1rem 3.2rem 1rem 1rem;
+        gap: 1.8rem;
+        font-size: var(--taille-texte-nav);
+        background-color: var(--couleur-primaire);
+        border: 1px solid var(--couleur-navigation);
+        box-shadow: var(--ombre)
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    .navigation-mobile nav:nth-child(3) ul a{
+        font-size: var(--taille-texte-nav);
+        border-bottom: 0.313rem solid var(--couleur-navigation);
+    }
+
+    /*BANDEAUX HAUT DE PAGE*/
+    .bandeau {
+        height: 180px;
+        background-attachment: unset;
+    }
+
+    .soins-bandeau {
+        background-position: 66% 80%;
+    }
+
+    .coiffures-bandeau, .contact-bandeau {
+        background-position: 50% 40%;
+    }
+  
+    .informations-bandeau {
+        background-position: 50% 90%;
+    }
+
+    /*BOUTONS MOBILE*/
+    .bouton {
+        font-size: var(--taille-texte);
+    }
+
+    /*FOOTER MOBILE*/
+    .liens-footer {
+        margin-right: 0.4rem;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    .liens-footer hr {
+        margin: 1.2rem 0 1.2rem 0;
+    }
+
+    .vitrine h1 {
+        gap: 1.8rem;
+        margin-right: 0.2rem;
+        text-align: right;
+    }
+
+    /*TITRES MOBILE*/
+    .vitrine .slogan,
+    #services,
+    .vitrine-2 h2,
+    .portrait h2,
+    .presentation .titre-presentation {
+        font-size: var(--taille-titres-mobile);
+    }
+
+    /*TEXTE MOBILE*/
+    .vitrine .genac-tif,
+    .caroussel-legende p,
+    .presentation p, 
+    .presentation .chapeau,
+    .coordonnees address {
+        font-size: var(--taille-texte);
+    }
+
+    /*PAGE ACCUEIL*/
+    .vitrine .ciseaux {
+        margin-bottom: 3.2rem;
+    }
+
+    .vitrine .ciseaux svg {
+        height: 36px;
+        width: 36px;
+    }
+
+    #services {
+        margin-top: 6rem;
+    }
+
+    .services p,
+    .services .bouton {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+
+    .vitrine-2 {
+        background-position: 46% 50%;
+    }
+
+    .vitrine-2 p {
+        font-size: var(--taille-texte);
+        width: 84%;
+    }
+
+    .portrait {
+        margin-bottom: 0;
+    }
+
+    /*PAGE SOINS*/
+    .filtres {
+        justify-content: center;
+    }
+
+    /*PAGE SALON*/
+    .caroussel-legende {
+        padding: 1rem 2rem;
+    }
+
+    .salon {
+        margin-top: 2rem;
+    }
+
+    .presentation .chapeau {
+        width: 34%;
+    }
+
+    /*PAGE CONTACT*/
+    .coordonnees h3, .horaires h3, .meteo h3 {
+        font-size: var(--taille-texte-nav);
+    }
+
+    .nom-prenom {
+        flex-direction: column;
+    }
+
+    .nom-prenom div {
+        width: 100%;
+    }
+
+    /*PAGE INFORMATIONS*/
+    .jours {
+        margin-bottom: 4rem;
+    }
+
+    .itineraire {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    /*PAGE PANIER*/
+    .etiquette {
+        padding: 0.8rem 0.4rem;
+    }
+
+    .panier {
+        margin-bottom: 4.8rem;
+    }
+
+
+}
+
+@media screen and (max-width: 384px) {
+
+    /*PAGE COIFFURES*/
+    .photo-anime,
+    .boite,
+    .derriere {
+        width: 100%;
+    }
+
+    .derriere p {
+        margin: 0 0.4rem 0 0.4rem;
+    }
+
+    /*PAGE SALON*/
+    .caroussel-legende {
+        padding: 1rem 1.2rem;
+    }
+
+    .salon {
+        margin-bottom: 4rem;
+    }
+    
+    .petite-image {
+        height: 300px;
+        width: auto;
+        bottom: 10%;
+    }
+
+    /*PAGE PANIER*/
+    .etiquette .titre-prix {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    /*PAGE SOINS*/
+    .item {
+        margin: 0 0.2rem 0 0.2rem;
+    }
+
+    .item p:nth-child(4) {
+        height: 120px;
+    }
+
+    .produits {
+        gap: 2.2rem;
+    }
+
+    /*PAGE SALON*/
+    .salon {
+        margin-top: 0rem;
+    }
+
+    .petite-image {
+        height: 260px;
+        border: 0.6rem solid var(--couleur-primaire);
+    }
+
+    /*PAGE MENTIONS LEGALES*/
+    .titre-mentions {
+        font-size: var(--taille-texte-nav);
+        margin-bottom: 0.4rem;
+    }
+}

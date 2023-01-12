@@ -1,0 +1,500 @@
+:root {
+    --couleur-primaire: #FDFDFD;
+    --couleur-secondaire: #2D2D2D;
+    --couleur-navigation: #FAB2D7;
+    --couleur-defilement: rgba(102, 85, 94, 0.67);
+    --couleur-logo: #545454;
+    --ombre: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --typo-titres: 'Old Standard TT', 'Times New Roman', Times, serif;
+    --typo-texte: 'Poppins', Arial, Helvetica, sans-serif;
+    --taille-titres: 72px;
+    --taille-titres-intermediaire: 48px;
+    --taille-sous-titres: 36px;
+    --taille-petits-titres: 22px;
+    --taille-minus-titres: 20px;
+    --taille-texte: 16px;
+    --taille-texte-nav: 18px;
+    --taille-titres-mobile: 32px;
+    --fine: 300;
+    --normal: 400;
+    --largeur-wrapper: 1200px;
+    --largeur-wrapper-nav: 1720px;
+}
+
+/*
+REGLES GLOBALES DU SITE
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    font-family: var(--typo-texte);
+    font-size: var(--taille-texte);
+    font-weight: var(--fine);
+    opacity: 0.9;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: 400;
+    font-family: var(--typo-titres);
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-secondaire);
+}
+
+ul,
+figure,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+address {
+    font-style: normal;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-style: italic;
+}
+
+/*
+STRUCTURE GÉNÉRALE
+*/
+.wrapper {
+    max-width: var(--largeur-wrapper);
+    margin: auto;
+}
+
+.wrapper-nav {
+    max-width: var(--largeur-wrapper-nav);
+    margin: auto;
+}
+
+.inverse {
+    transform: scaleX(-1);
+}
+
+.wdth-cent {
+    width: 100%;
+}
+
+.wdth-cinquante {
+    width: 50%;
+}
+
+.center {
+    text-align: center;
+}
+
+/*
+CLASSES FLEXBOX
+*/
+.row-start-center {
+    display: flex;
+    align-items: center;
+}
+
+.row-start {
+    display: flex;
+    align-items: flex-start;
+}
+
+.row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-btw-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-btw-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.reverse-btw-center {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-end-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.row-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.row-wrap-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.row-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-wrap-btw-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-wrap-center-start {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.column-start {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-btw {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column-center-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.column-btw-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/*
+ACCESSIBILITÉ HANDICAPÉ
+ET NAVIGATION CLAVIER
+*/
+/*Rendre invisible un élément visuellement
+mais accessible aux lecteurs d'écrans*/
+.lecteur-ecran {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/*Lui permettre d'être focalisé au clavier*/
+.lecteur-ecran-focus:active,
+.lecteur-ecran-focus:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: normal;
+    width: auto;
+}
+
+/*
+ÉTATS ET PSEUDO CLASSES
+*/
+.active {
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+}
+
+a:focus-visible,
+.fleche:focus-visible {
+    outline: solid .4rem var(--couleur-navigation);
+}
+
+input:focus,
+textarea:focus,
+select:focus-visible {
+    outline: solid .2rem var(--couleur-navigation);
+}
+
+nav a:hover,
+nav a:focus,
+footer section a:hover,
+footer li a:focus {
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+    outline: none;
+}
+
+/*
+MENU DE NAVIGATION
+*/
+.menu-principal {
+    position: absolute;
+    background-color: var(--couleur-primaire);
+    opacity: 0.94;
+    font-size: var(--taille-texte-nav);
+    white-space: nowrap;
+}
+
+.navigation {
+    height: 200px;
+}
+
+.navigation nav ul {
+    gap: 4.6rem;
+}
+
+.nav-gauche a {
+    padding-right: 1rem;
+}
+
+.nav-droite a {
+    padding-left: 1rem;
+}
+
+.navigation-mobile {
+    display: none;
+}
+
+/*
+EN-TETE DES PAGES : 
+soins, coiffures, contact, informations, panier, merci, 404
+*/
+.en-tete {
+    margin: 3rem 0 3rem 0;
+}
+
+.en-tete h2,
+.en-tete h1 {
+    font-size: var(--taille-titres);
+    padding-bottom: 0.2rem;
+}
+
+.en-tete p {
+    width: 80%;
+    font-size: var(--taille-texte-nav);
+    line-height: 1.6rem;
+}
+
+.annonce {
+    border: 0.18rem solid var(--couleur-secondaire);
+    padding: 0.6rem;
+}
+
+.annonce p {
+    width: fit-content;
+    max-width: 400px;
+}
+
+/*
+VITRINES DES PAGES :
+Image large début de page : accueil, merci, 404
+*/
+.vitrine {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.contenu {
+    height: 100%;
+}
+
+/*
+COORDONNEES DES PAGES : 
+contact et informations
+*/
+.coordonnees address {
+    font-size: var(--taille-texte-nav);
+    padding-top: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.coordonnees h3 {
+    font-size: var(--taille-petits-titres);
+    font-family: var(--typo-texte);
+    font-weight: var(--fine);
+}
+
+.coordonnees li {
+    list-style: inside;
+    line-height: 1.6rem;
+    padding-top: 0.2rem;
+    padding-left: 0.8rem;
+}
+
+
+/*
+BANDEAUX DES PAGES : 
+soins, coiffures, contact, informations, panier
+*/
+.bandeau {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 400px;
+}
+
+/*
+BOUTONS :
+remonter haut de page
+*/
+.remonter {
+    display: none;
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    padding: 0.8rem;
+    border-radius: 0.25rem;
+    background-color: var(--couleur-defilement);
+}
+
+.remonter:hover {
+    background-color: var(--couleur-secondaire);
+}
+
+/*Boutons de navigation du site*/
+.bouton {
+    padding: 0.8rem 2.4rem;
+    font-size: var(--taille-texte-nav);
+    font-weight: var(--normal);
+    font-family: var(--typo-texte);
+    border-radius: 0.8rem;
+    cursor: pointer;
+    text-align: center;
+    white-space:nowrap;
+}
+
+.noir {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-primaire);
+    border: 0.18rem solid var(--couleur-secondaire);
+}
+
+.noir:hover,
+.noir:focus {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    border: 0.18rem solid var(--couleur-secondaire);
+    outline: none;
+}
+
+.blanc {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-secondaire);
+    border: 0.18rem solid var(--couleur-secondaire);
+}
+
+.blanc:hover,
+.blanc:focus {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-primaire);
+    border: 0.18rem solid var(--couleur-secondaire);
+    outline: none;
+}
+
+.blanc:focus-visible,
+.noir:focus-visible {
+    outline: solid .4rem var(--couleur-navigation);
+}
+
+.boutons-retour {
+    padding-top: 3.2rem;
+    gap: 8rem;
+}
+
+/*
+FOOTER
+*/
+footer {
+    background-color: var(--couleur-secondaire);
+    color: var(--couleur-primaire);
+}
+
+footer a {
+    color: var(--couleur-primaire);
+    white-space: nowrap;
+}
+
+footer hr {
+    width: 84px;
+    color: var(--couleur-primaire);
+    margin: 2rem 0 2rem 0;
+}
+
+footer ul {
+    gap: 0.8rem;
+}
+
+footer h3 {
+    font-size: 24px;
+    font-weight: var(--normal);
+    white-space: nowrap;
+}
+
+.footer-principal {
+    padding-top: 6rem;
+    padding-bottom: 4.8rem;
+    gap: 2rem;
+}
+
+.liens-footer {
+    gap: 12rem;
+}
+
+.portrait,
+.produits,
+#galerie,
+.salon,
+.formulaire-contact,
+.itineraire,
+.formulaire-reservation {
+    margin-bottom: 8rem;
+}

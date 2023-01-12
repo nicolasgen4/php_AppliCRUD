@@ -1,0 +1,431 @@
+@media screen and (max-width: 1720px) {
+
+    /*MENU NAVIGATION TABLETTE*/
+    .navigation {
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+    }
+
+    /*FOOTER TABLETTE*/
+    .liens-footer {
+        margin-right: 0.4rem;
+    }
+
+    .logo-footer {
+        margin-left: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 1580px) {
+
+    /*MENU NAVIGATION TABLETTE*/
+    .navigation nav ul {
+        gap: 3.6rem;
+    }
+
+    /*FOOTER TABLETTE*/
+    .liens-footer {
+        gap: 7.6rem;
+    }
+
+    /*PAGE SALON*/
+    .caroussel-legende h1 {
+        white-space: unset;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+
+    /*MENU NAVIGATION TABLETTE*/
+    .navigation nav ul {
+        gap: 2.6rem;
+    }
+
+    /*FOOTER TABLETTE*/
+    .footer-principal {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 3.2rem;
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
+    }
+
+    .liens-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6rem;
+        margin: 0 0 0 2rem;
+    }
+
+    .liens-footer hr {
+        margin: 1.6rem 0 1.6rem 0;
+    }
+
+    .logo-footer {
+        margin-left: 0;
+    }
+
+    /*PAGE ACCUEIL*/
+    .vitrine-2 div {
+        margin-right: 0.2rem;
+    }
+
+    .vitrine-2 h2,
+    .portrait h2 {
+        font-size: 60px;
+    }
+
+    /*PAGE SALON*/
+    .caroussel-legende {
+        width: 48%;
+    }
+
+    /*EN-TETE MERCI ET 404*/
+    .en-tete.pleine-page {
+        align-items: flex-end;
+        text-align: right;
+        margin-right: 0.4rem;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+
+    /*MENU NAVIGATION TABLETTE*/
+    .navigation {
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+    }
+
+    .navigation nav {
+        width: 28%;
+    }
+
+    .navigation nav ul {
+        flex-direction: column;
+    }
+
+    .navigation nav:nth-child(1) ul {
+        align-items: flex-start;
+        margin-left: 0.4rem;
+        text-align: left;
+    }
+
+    .navigation nav:nth-child(3) ul {
+        align-items: flex-end;
+        margin-right: 0.4rem;
+        text-align: right;
+    }
+
+    /*EN-TETE DES PAGES*/
+    .en-tete {
+        margin: 3rem 0.6rem 3rem 0.6rem;
+    }
+
+    /*PAGE ACCUEIL*/
+    .vitrine .presentation-accueil {
+        margin-right: 0.4rem;
+    }
+
+    /*PAGE SALON*/
+    .caroussel-legende {
+        width: 64%;
+        left: 12%;
+    }
+
+    /*PAGE CONTACT*/
+    .formulaire-contact {
+        width: auto;
+        margin: 2rem 0.4rem 4rem 0.4rem;
+    }
+
+    /*PAGE INFORMATIONS*/
+    .horaires {
+        margin: 0 0.4rem 0 0.4rem;
+    }
+
+    /*PAGE PANIER*/
+    .formulaire-reservation {
+        margin: 0 0.4rem 4rem 0.4rem;
+    }
+
+    /*PAGE MENTIONS*/
+    .mentions {
+        margin: 0 0.4rem 4rem 0.4rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    /*PAGE ACCUEIL*/
+    .portrait {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .portrait div {
+        margin-left: 0.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .portrait p {
+        width: 96%;
+    }
+
+    .portrait img {
+        max-height: 420px;
+    }
+
+    /*PAGE SALON*/
+    .caroussel-legende {
+        max-width: unset;
+        width: auto;
+        left: 0;
+    }
+
+    .fleche {
+        top: 88%;
+    }
+
+    .salon {
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    .salon .presentation,
+    .conteneur-images {
+        width: 80%;
+    }
+
+    /*PAGE INFORMATIONS*/
+    .itineraire {
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+
+    /*PAGES MERCI ET 404*/
+    .en-tete.pleine-page p {
+        background-color: rgba(249, 249, 249, 0.8);
+        border-radius: 0.5rem;
+        padding: 0.8rem;
+        width: 78%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 880px) {
+
+    /*PAGE ACCUEIL*/
+    .vitrine,
+    .vitrine-2 {
+        background-attachment: unset;
+    }
+
+    /*PAGE INFORMATIONS*/
+    .infos-utiles {
+        width: auto;
+        margin: 0 2rem 0 2rem;
+    }
+
+    /*PAGE DU PANIER*/
+    .formulaire-reservation div {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #reservation #nomClient,
+    #reservation #prenomClient,
+    #reservation #jour {
+        margin-right: 0;
+    }
+
+    .client {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    /*HEADER DU SITE*/
+    .menu-principal {
+        font-size: var(--taille-texte);
+    }
+
+    /*EN-TETE DES PAGES*/
+    .en-tete h2,
+    .en-tete div h1,
+    .caroussel-legende h1 {
+        font-size: var(--taille-titres-mobile);
+    }
+
+    .en-tete {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .en-tete p {
+        width: auto;
+    }
+
+    /*ANNONCE DE VACANCES*/
+    .annonce {
+        align-self: center;
+    }
+
+    /*TITRES ACCUEIL ET SALON*/
+    .vitrine .slogan,
+    .vitrine-2 h2,
+    .portrait h2,
+    .caroussel-legende h1 {
+        font-size: var(--taille-titres-intermediaire);
+    }
+
+    /*PAGE DES SOINS*/
+    .icone-panier {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icone-panier .titre-panier {
+        min-width: 100px;
+    }
+
+    .icone-panier .quantite-panier {
+        top: 32%;
+        left: 20%;
+    }
+
+    /*PAGE SALON*/
+    .salon .presentation,
+    .conteneur-images {
+        width: 94%;
+    }
+
+    /*PAGE INFORMATIONS*/
+    .google-maps img {
+        object-fit: cover;
+    }
+
+    /*PAGE DU PANIER*/
+    .panier {
+        gap: 3.2rem;
+    }
+
+    .panier-vide h3 {
+        font-size: var(--taille-petits-titres);
+    }
+
+    .panier-vide img {
+        height: fit-content;
+    }
+
+    .etiquette {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .etiquette section p:nth-child(3) {
+        width: auto;
+    }
+
+    .actions-panier {
+        margin: 2rem 0.6rem 0 0.6rem;
+        justify-content: space-between;
+        gap: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /*EN-TETE DES PAGES*/
+    .en-tete p {
+        font-size: var(--taille-texte);
+    }
+
+    /*PAGE DES SOINS*/
+    .filtres {
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    /*PAGES INFORMATIONS*/
+    .jours {
+        flex-direction: column;
+        gap: 1.4rem;
+    }
+
+    .jours section {
+        height: auto;
+        width: auto;
+        display: flex;
+        gap: 1rem;
+        border: none;
+        padding-right: 0;
+    }
+
+    .jours h4 {
+        font-size: var(--taille-texte);
+    }
+
+    .jours li {
+        list-style: none;
+    }
+
+    .infos-utiles {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /*PAGE DU PANIER*/
+    .etiquette section {
+        gap: 1.8rem;
+    }
+
+    .etiquette h3,
+    .etiquette section div p,
+    .etiquette label,
+    .etiquette a {
+        font-size: var(--taille-texte);
+    }
+
+    .etiquette input {
+        width: 42%;
+    }
+
+    .etiquette section {
+        height: auto;
+    }
+
+    .etiquette section div:nth-child(4) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .actions-panier {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .client {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #reservation .champ {
+        margin-bottom: 1rem;
+    }
+
+    .boutons-retour {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem;
+    }
+
+    .message {
+        font-size: var(--taille-petits-titres);
+    }
+}

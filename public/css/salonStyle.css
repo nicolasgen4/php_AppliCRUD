@@ -1,0 +1,94 @@
+.caroussel-legende {
+    position: absolute;
+    top: 50%;
+    left: 19%;
+    background-color: rgba(249, 249, 249, 0.8);
+    max-width: 48%;
+    border-radius: 0.5rem;
+    padding: 1rem 4rem;
+}
+
+.caroussel-legende h1 {
+    font-size: var(--taille-titres);
+    white-space: nowrap;
+}
+
+.caroussel-legende p {
+    line-height: 1.6rem;
+    font-size: var(--taille-texte-nav);
+}
+
+.caroussel img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.fleche {
+    position: absolute;
+    top: 56%;
+    padding: 0.8rem;
+    background-color: var(--couleur-defilement);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.fleche:hover {
+    background-color: var(--couleur-secondaire);
+}
+
+#precedent {
+    left: 5%;
+}
+
+#suivant {
+    right: 5%;
+}
+
+.salon {
+    margin-top: 5.6rem;
+    gap: 2.6rem;
+}
+
+.conteneur-images {
+    position: relative;
+    height: 48.2rem;
+}
+
+.grande-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.petite-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 1rem solid var(--couleur-primaire);
+}
+
+.salon .presentation {
+    width: 50%;
+}
+
+.presentation .chapeau {
+    font-family: var(--typo-texte);
+    font-weight: var(--fine);
+    font-size: var(--taille-minus-titres);
+    border-bottom: 0.313rem solid var(--couleur-navigation);
+    width: 22%;
+    margin-bottom: 2.2rem;
+    padding-bottom: 0.2rem;
+    white-space: nowrap;
+}
+
+.presentation .titre-presentation {
+    font-size: var(--taille-titres);
+}
+
+.presentation p {
+    line-height: 1.6rem;
+    padding: 2.2rem 0 3.2rem 0;
+    font-size: var(--taille-texte-nav);
+}

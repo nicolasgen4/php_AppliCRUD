@@ -1,0 +1,82 @@
+nav,
+.navigation-mobile a,
+.navigation a span,
+.bouton,
+.ciseaux,
+.genac-tif,
+.logo-footer,
+#remonter-haut,
+.services img,
+.portrait img,
+.services a span,
+.liens-footer section:nth-child(1),
+.liens-footer section:nth-child(3),
+.liens-footer section:nth-child(4),
+.bandeau h1,
+.en-tete a,
+#reinitialiser,
+form,
+.boite-animation span,
+.caroussel,
+.chapeau,
+.meteo,
+.itineraire a,
+label,
+input,
+.etiquette a {
+    display: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-secondaire);
+}
+
+.logo {
+    position: relative;
+    left: 36%;
+}
+
+.logo img {
+    max-height: 110px;
+    width: auto;
+}
+
+.boite-image img,
+.conteneur-images img {
+    max-height: 212px;
+    width: auto;
+}
+
+.devant,
+.derriere,
+.devant img {
+    max-height: 260px;
+    width: auto;
+}
+
+.google-maps img {
+    max-height: 360px;
+    width: auto;
+}
+
+.panier-vide img {
+    max-height: 300px;
+    width: auto;
+}
+
+.etiquette img {
+    max-height: 180px;
+    width: auto;
+}

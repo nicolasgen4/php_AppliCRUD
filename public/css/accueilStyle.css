@@ -1,0 +1,106 @@
+.vitrine-accueil {
+    background-image: url(../images/vitrine.webp);
+    background-position: top;
+}
+
+.vitrine-accueil h1 {
+    gap: 2.6rem;
+}
+
+.vitrine-accueil .genac-tif {
+    font-family: var(--typo-texte);
+    font-size: var(--taille-minus-titres);
+    font-weight: var(--fine);
+}
+
+.vitrine-accueil .slogan {
+    font-size: var(--taille-titres);
+}
+
+.vitrine-accueil .presentation-accueil {
+    height: 56%;
+}
+
+#services {
+    margin-top: 8rem;
+    font-size: var(--taille-sous-titres);
+}
+
+.services {
+    gap: 3.92rem;
+    margin: 1.2rem 0 8rem 0;
+}
+
+.vitrine-2 {
+    background-image: url(../images/vitrine-2.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 700px;
+    max-height: 760px;
+    margin-bottom: 8rem;
+    text-align: right;
+}
+
+.vitrine-2 div,
+.portrait div {
+    gap: 2rem;
+}
+
+.vitrine-2 h2,
+.portrait h2 {
+    font-size: var(--taille-titres);
+}
+
+.vitrine-2 p {
+    text-align: right;
+    width: 62%;
+    font-size: var(--taille-texte-nav);
+    line-height: 1.6rem;
+}
+
+.service {
+    max-width: 358px;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.service .boite-image {
+    overflow: hidden;
+    height: 300px;
+}
+
+.service a {
+    gap: 1rem;
+}
+
+.service img {
+    width: 358px;
+    max-height: 300px;
+}
+
+.service img:hover,
+.service img:focus {
+    transform: scale(1.1);
+    transition-duration: 1000ms;
+    transition-property: all;
+    filter: brightness(105%);
+}
+
+.service h3 {
+    font-family: var(--typo-texte);
+    font-weight: var(--normal);
+    font-size: var(--taille-minus-titres);
+}
+
+.service p {
+    line-height: 1.4rem;
+}
+
+.portrait p {
+    font-size: var(--taille-texte-nav);
+    width: 68%;
+    line-height: 1.6rem;
+}
