@@ -10,4 +10,4 @@ Site web front et back office en architecture MVC, fonctions CRUD, e-commerce, C
 </ul>
 
 # Crédits
-Réalisé durant mon stage de 6 semaines au sein de ma formation à la CCI Open Lab.
+Réalisé durant un stage de 6 semaines en autonomie pour un salon de coiffure. 
