@@ -8,7 +8,6 @@
  * Analyse la requête HTTP
  * Route vers le bon controleur
  * Mise à jour : 18/10/2022
- * @author nicolasloizeau.gen4@gmail.com
  */
 
 require_once 'admin-gt/inclure/conf.php';
