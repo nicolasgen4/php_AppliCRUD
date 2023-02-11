@@ -11,3 +11,4 @@ Site web front et back office en architecture MVC, fonctions CRUD, e-commerce, C
 
 # Crédits
 Réalisé durant un stage de 6 semaines en autonomie pour un salon de coiffure. 
+Consultable à https://nicolas.cciopenlab.fr/site-coiffeuse/ 
