@@ -60,17 +60,28 @@ if (
         //Vérification des champs
         !empty($_POST['nomCategorie'])
     ) {
-        //Envoi en bdd
-        $succes = ajouterUneCategorie(
-            $bdd,
-            strip_tags(trim($_POST['nomCategorie']))
-        );
-        $msg['message'] = [
-            'code' => 'success',
-            'text' => 'La catégorie a bien été ajouté'
-        ];
-        $categories = retournerLesCategories($bdd);
-        require_once 'vue/categoriesVue.php';
+        //Vérification du nom de catégorie
+        if (verifierNomCategorie($bdd, $_POST['nomCategorie']) == false) {
+            //Envoi en bdd
+            $succes = ajouterUneCategorie(
+                $bdd,
+                strip_tags(trim($_POST['nomCategorie']))
+            );
+            $msg['message'] = [
+                'code' => 'success',
+                'text' => 'La catégorie a bien été ajouté'
+            ];
+            $categories = retournerLesCategories($bdd);
+            require_once 'vue/categoriesVue.php';
+        } else {
+            //Erreur nom existe déjà
+            $msg['message'] = [
+                'code' => 'warning',
+                'text' => 'Cette catégorie existe déjà'
+            ];
+            $categories = retournerLesCategories($bdd);
+            require_once 'vue/categoriesVue.php';
+        }
     } else {
         //Erreur champs vides
         $msg['message'] = [
