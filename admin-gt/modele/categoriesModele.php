@@ -93,6 +93,28 @@ function retournerUneCategorie(PDO $bdd, int $id)
 }
 
 /**
+ * VERIFIER NOM CATEGORIE
+ * @param PDO $bdd : objet qui pilote la bdd
+ * @param string $nom : string à vérifier
+ * @return bool : true si le nom existe déjà
+ */
+function verifierNomCategorie(PDO $bdd, string $nom) {
+    $sql = 'SELECT
+    categories.nom_categories
+    FROM categories
+    WHERE nom_categories = :nom';
+    $q = $bdd->prepare($sql);
+    $q->bindParam(':nom', $nom);
+    $q->execute();
+    $result = $q->rowCount();
+    if ($result > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
  * TESTS UNITAIRES
  * Classe Debug
  * Fonctions var_dump et print_r
@@ -102,3 +124,4 @@ function retournerUneCategorie(PDO $bdd, int $id)
 //Debug::var_dump(supprimerUneCatégorie($bdd, 6));
 //Debug::print_r(retournerLesCategories($bdd));
 //Debug::print_r(retournerUneCategorie($bdd, 15));
+//Debug::var_dump(verifierNomCategorie($bdd, 'test'));
