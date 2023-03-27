@@ -122,11 +122,12 @@ function retournerUnAdministrateur(PDO $bdd, int $id)
  * @param string $email : string à vérifier
  * @return bool : true si l'email existe déjà
  */
-function verifierEmailAdmin(PDO $bdd, string $email) {
+function verifierEmailAdmin(PDO $bdd, string $email)
+{
     $sql = 'SELECT
     administrateurs.email
     FROM administrateurs
-    WHERE email = :email';
+    WHERE administrateurs.email = :email';
     $q = $bdd->prepare($sql);
     $q->bindParam(':email', $email);
     $q->execute();
@@ -148,4 +149,4 @@ function verifierEmailAdmin(PDO $bdd, string $email) {
 //Debug::var_dump(supprimerUnAdministrateur($bdd, 2));
 //Debug::print_r(retournerLesAdministrateurs($bdd));
 //Debug::print_r(retournerUnAdministrateur($bdd, 1));
-//Debug::var_dump(verifierEmailAdmin($bdd, '@gmail.com'));
+//Debug::var_dump(verifierEmailAdmin($bdd, 'coiffeuse@gmail.com'));
