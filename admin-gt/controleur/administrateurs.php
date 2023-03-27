@@ -91,20 +91,30 @@ if (
             $administrateurs = retournerLesAdministrateurs($bdd);
             require_once 'vue/adminVue.php';
         } else {
-            //Envoi en bdd
-            $succes = ajouterUnAdministrateur(
-                $bdd,
-                strip_tags(trim($_POST['nomAdmin'])),
-                strip_tags(trim($_POST['prenomAdmin'])),
-                strip_tags(trim($_POST['emailAdmin'])),
-                strip_tags(trim(password_hash($_POST['mdpAdmin'], PASSWORD_DEFAULT)))
-            );
-            $msg['message'] = [
-                'code' => 'success',
-                'text' => 'L\'administrateur a bien été ajouté'
-            ];
-            $administrateurs = retournerLesAdministrateurs($bdd);
-            require_once 'vue/adminVue.php';
+            if (verifierEmailAdmin($bdd, $_POST['emailAdmin']) == false) {
+                //Envoi en bdd
+                $succes = ajouterUnAdministrateur(
+                    $bdd,
+                    strip_tags(trim($_POST['nomAdmin'])),
+                    strip_tags(trim($_POST['prenomAdmin'])),
+                    strip_tags(trim($_POST['emailAdmin'])),
+                    strip_tags(trim(password_hash($_POST['mdpAdmin'], PASSWORD_DEFAULT)))
+                );
+                $msg['message'] = [
+                    'code' => 'success',
+                    'text' => 'L\'administrateur a bien été ajouté'
+                ];
+                $administrateurs = retournerLesAdministrateurs($bdd);
+                require_once 'vue/adminVue.php';
+            } else {
+                //Erreur email existe déjà
+                $msg['message'] = [
+                    'code' => 'warning',
+                    'text' => 'Merci de choisir un autre email'
+                ];
+                $administrateurs = retournerLesAdministrateurs($bdd);
+                require_once 'vue/adminVue.php';
+            }
         }
     } else {
         //Erreur champs vides
