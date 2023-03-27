@@ -93,16 +93,17 @@ function retournerUneCategorie(PDO $bdd, int $id)
 }
 
 /**
- * VERIFIER NOM CATEGORIE
+ * VERIFIER NOM CATÉGORIE
  * @param PDO $bdd : objet qui pilote la bdd
  * @param string $nom : string à vérifier
  * @return bool : true si le nom existe déjà
  */
-function verifierNomCategorie(PDO $bdd, string $nom) {
+function verifierNomCategorie(PDO $bdd, string $nom)
+{
     $sql = 'SELECT
     categories.nom_categories
     FROM categories
-    WHERE nom_categories = :nom';
+    WHERE categories.nom_categories = :nom';
     $q = $bdd->prepare($sql);
     $q->bindParam(':nom', $nom);
     $q->execute();
@@ -124,4 +125,4 @@ function verifierNomCategorie(PDO $bdd, string $nom) {
 //Debug::var_dump(supprimerUneCatégorie($bdd, 6));
 //Debug::print_r(retournerLesCategories($bdd));
 //Debug::print_r(retournerUneCategorie($bdd, 15));
-//Debug::var_dump(verifierNomCategorie($bdd, 'test'));
+//Debug::var_dump(verifierNomCategorie($bdd, 'Couleurs'));
